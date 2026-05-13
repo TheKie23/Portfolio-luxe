@@ -4,36 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Portfolio | For Sale</title>
+    
+    <!-- Icons Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap');
-        :root { --gold: #d4af37; --black: #0a0a0a; --white: #ffffff; --soft-gray: #a0a0a0; }
-        body { background-color: var(--black); color: var(--white); font-family: 'Poppins', sans-serif; overflow-x: hidden; text-align: center; }
-        nav { padding: 30px 8%; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--gold); letter-spacing: 3px; }
-        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-        .moving-text { font-family: 'Playfair Display', serif; font-size: clamp(40px, 8vw, 80px); animation: float 4s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-        .card { background: #1a1a1a; padding: 40px; margin: 20px; border-radius: 5px; transition: 0.5s; border-bottom: 3px solid transparent; display: inline-block; width: 300px; }
+        /* --- CSS SECTION: DESIGN & COLORS --- */
+        :root { 
+            --gold: #d4af37; /* EDIT THIS: Change the main accent color */
+            --black: #0a0a0a; /* EDIT THIS: Change the background color */
+            --white: #ffffff; 
+            --soft-gray: #a0a0a0; 
+        }
+
+        body { 
+            background-color: var(--black); 
+            color: var(--white); 
+            font-family: 'Segoe UI', sans-serif; 
+            text-align: center; 
+            margin: 0;
+        }
+
+        /* Hero Animation */
+        .moving-text { 
+            font-size: clamp(40px, 8vw, 80px); 
+            animation: float 4s ease-in-out infinite; 
+        }
+
+        @keyframes float { 
+            0%, 100% { transform: translateY(0); } 
+            50% { transform: translateY(-15px); } 
+        }
+
+        .card { 
+            background: #1a1a1a; 
+            padding: 40px; 
+            margin: 20px; 
+            border-radius: 5px; 
+            transition: 0.5s; 
+            display: inline-block; 
+            width: 300px; 
+            border-bottom: 3px solid transparent;
+        }
+
         .card:hover { transform: translateY(-10px); border-color: var(--gold); }
         .card i { font-size: 40px; color: var(--gold); margin-bottom: 20px; }
-        .btn { border: 1px solid var(--gold); color: var(--gold); padding: 10px 30px; text-decoration: none; transition: 0.4s; }
+        
+        .btn { 
+            border: 1px solid var(--gold); 
+            color: var(--gold); 
+            padding: 10px 30px; 
+            text-decoration: none; 
+            transition: 0.4s; 
+        }
+
         .btn:hover { background: var(--gold); color: #000; }
     </style>
 </head>
 <body>
-    <nav><div class="logo">LUXE.</div></nav>
-    <section class="hero">
-        <h1 class="moving-text">The Art of <span>Code</span></h1>
-        <p style="color: var(--soft-gray); margin-bottom: 30px;">PREMIUM DIGITAL ARCHITECT</p>
+
+    <!-- --- NAVIGATION SECTION --- -->
+    <nav style="padding: 30px;">
+        <!-- EDIT THIS: Change your Brand/Logo Name -->
+        <div style="color: var(--gold); font-size: 24px; font-weight: bold; letter-spacing: 3px;">LUXE.</div>
+    </nav>
+
+    <!-- --- HERO SECTION --- -->
+    <section style="height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <!-- EDIT THIS: Main Title (Floating Animation) -->
+        <h1 class="moving-text">The Art of Code</h1>
+        
+        <!-- EDIT THIS: Your Job Title or Subtitle -->
+        <p style="color: var(--soft-gray); margin-bottom: 30px; letter-spacing: 2px;">PREMIUM DIGITAL ARCHITECT</p>
+        
+        <!-- EDIT THIS: Button Text and Link -->
         <a href="#" class="btn">VIEW MY WORK</a>
     </section>
+
+    <!-- --- SKILLS / SERVICES SECTION --- -->
     <section>
-        <div class="card"><i class="fas fa-gem"></i><h3>UI Design</h3><p>Elegant interfaces for elite brands.</p></div>
-        <div class="card"><i class="fas fa-code"></i><h3>Backend</h3><p>Powerful Python & SQL systems.</p></div>
+        <!-- SKILL CARD 1 -->
+        <div class="card">
+            <i class="fas fa-gem"></i> <!-- Change Icon here -->
+            <h3>UI Design</h3> <!-- Change Skill Title -->
+            <p>Elegant interfaces for elite brands.</p> <!-- Change Description -->
+        </div>
+
+        <!-- SKILL CARD 2 -->
+        <div class="card">
+            <i class="fas fa-code"></i> <!-- Change Icon here -->
+            <h3>Backend</h3> <!-- Change Skill Title -->
+            <p>Powerful Python & SQL systems.</p> <!-- Change Description -->
+        </div>
     </section>
-    <footer style="margin-top: 50px; padding: 20px; border-top: 1px solid #222; font-size: 12px; color: var(--soft-gray);">
+
+    <!-- --- FOOTER SECTION --- -->
+    <footer style="margin-top: 50px; padding: 40px; border-top: 1px solid #222; font-size: 12px; color: var(--soft-gray);">
+        <!-- EDIT THIS: Copyright Text -->
         &copy; 2026 LUXE TEMPLATE. ALL RIGHTS RESERVED.
     </footer>
+
 </body>
 </html>
